@@ -13,6 +13,6 @@ export default defineConfig(({ mode }) => {
     plugins: [
         react(),
     ],
-    // base: '/test-react-route/'
+    base: '/react-routes-test/'
   }
 })
