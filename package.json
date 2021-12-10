@@ -1,0 +1,36 @@
+{
+  "name": "test-react-route",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "cypress:open-ct": "cypress open-ct",
+    "cypress:open": "cypress open",
+    "jest": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest"
+  },
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-dom": "^17.0.0",
+    "react-yandex-maps": "^4.6.0",
+    "styled-components": "^5.3.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.16.0",
+    "@cypress/react": "^5.10.3",
+    "@cypress/vite-dev-server": "^2.2.1",
+    "@testing-library/cypress": "^8.0.2",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@vitejs/plugin-react": "^1.0.0",
+    "cross-env": "^7.0.3",
+    "cypress": "^9.1.1",
+    "jest": "^27.4.3",
+    "jest-environment-jsdom": "^27.4.3",
+    "sass": "^1.44.0",
+    "vite": "^2.6.4"
+  }
+}
