@@ -1,14 +1,18 @@
-import { getHandleSelector } from './drag-n-drop/util'
+import { getDroppableSelector, getHandleSelector } from './drag-n-drop/util'
 import * as keyCodes from './drag-n-drop/key-codes'
 
 describe('Testing App', () => {
-
+  
   beforeEach(() => {
-    cy.visit('http://localhost:3000/test-react-route/test-react-route') // because of github pages
+    cy.visit('http://localhost:3000/react-routes-test/react-routes-test') // because of github pages // base in vite.config.js
   })
-
+  
   it('Adding new city', () => {
-    cy.get('form').type('Milan, Italy').submit()
+    cy.get(getHandleSelector()).should('have.length', 3)
+    cy.get('input').type('Milan, Italy')
+    cy.get('form').submit()
+    cy.get('input').should('have.value', '')
+    cy.get(getHandleSelector()).should('have.length', 4)
   })
 
   it('should reorder within a list 1st and 2nd', () => {
