@@ -1,6 +1,10 @@
 # Редактор маршрутов на React и YandexMaps
 
-## Как запустить
+## Где посмотреть?
+
+https://keeeparis.github.io/react-routes-test/
+
+## Как запустить?
 
 Установить все пакеты
 <pre>npm i</pre>
