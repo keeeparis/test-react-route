@@ -1,5 +1,5 @@
-export const geocode = async (input) => {
-    const response = await window.ymaps.geocode(input)
+export const geocode = async (input, ymaps) => {
+    const response = await ymaps.geocode(input)
 
     const obj = response.geoObjects.get(0)
     const newCoords = obj.geometry.getCoordinates()
