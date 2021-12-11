@@ -1,4 +1,4 @@
-import { getDroppableSelector, getHandleSelector } from './drag-n-drop/util'
+import { getHandleSelector } from './drag-n-drop/util'
 import * as keyCodes from './drag-n-drop/key-codes'
 
 describe('Testing App', () => {
@@ -9,7 +9,7 @@ describe('Testing App', () => {
   
   it('Adding new city', () => {
     cy.get(getHandleSelector()).should('have.length', 3)
-    cy.get('input').type('Milan, Italy')
+    cy.get('input').type('Milan, Italy', {delay: 200})
     cy.get('form').submit()
     cy.get('input').should('have.value', '')
     cy.get(getHandleSelector()).should('have.length', 4)
