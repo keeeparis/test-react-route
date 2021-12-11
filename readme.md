@@ -19,3 +19,12 @@ https://keeeparis.github.io/react-routes-test/
 - React-Yandex-Yaps - https://react-yandex-maps.vercel.app/ - wrapper around Yandex Api
 - React-Beautiful-Dnd - https://github.com/atlassian/react-beautiful-dnd - Drag and Drop
 - Styled-Components - css
+
+## Тесты
+
+Cypress
+
+Запуск e2e
+<pre>npm run cypress:open</pre>
+Запуск unit-тестов
+<pre>npm run cypress:open-ct</pre>
