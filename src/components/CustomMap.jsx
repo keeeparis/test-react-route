@@ -30,12 +30,12 @@ const Square = styled.div`
     background-color: ${props => props.backgroundColor}
 `
 
-export default function CustomMap({mapRef, placemarks, setPlacemarks}) { 
+export default function CustomMap({ mapRef, placemarks, setPlacemarks, ymaps }) { 
     const handleDragend = async (e, index) => {
-        const newCoords = e.originalEvent.target.geometry.getCoordinates()
+        const newCoords = e.get('target').geometry.getCoordinates()
         const newPlacemarks = [...placemarks]
 
-        const {address} = await geocode(newCoords)
+        const {address} = await geocode(newCoords, ymaps)
 
         newPlacemarks.splice(index, 1, {...placemarks[index], coords: newCoords, name: address})
         setPlacemarks(newPlacemarks)

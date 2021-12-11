@@ -45,7 +45,7 @@ const List = styled.div`
     background-color: ${props => props.isDragging ? 'lightblue' : '#f04323'}
 `
 
-export default function CustomInfo({mapRef, placemarks, setPlacemarks}) {
+export default function CustomInfo({ mapRef, placemarks, setPlacemarks, ymaps }) {
     const inputRef = useRef(null)
 
     const handleDelete = (index) => {
@@ -61,7 +61,7 @@ export default function CustomInfo({mapRef, placemarks, setPlacemarks}) {
         try {
             if (!input.trim().length) return 
 
-            const { newCoords, address } = await geocode(input)
+            const { newCoords, address } = await geocode(input, ymaps)
 
             setPlacemarks([...placemarks, { coords: newCoords, id: uuidv4(), name: address }])
 
@@ -74,8 +74,7 @@ export default function CustomInfo({mapRef, placemarks, setPlacemarks}) {
     }
 
     useEffect(() => {
-        // wait until ymaps object downloads and apply suggest to input with id='suggest'
-        window.ymaps.ready(() => { new window.ymaps.SuggestView('suggest')}) 
+        new ymaps.SuggestView(inputRef.current)
     }, []) 
 
     return (
