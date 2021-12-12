@@ -66,7 +66,8 @@ export default function CustomInfo({ mapRef, placemarks, setPlacemarks, ymaps })
             setPlacemarks([...placemarks, { coords: newCoords, id: uuidv4(), name: address }])
 
             mapRef.current.setCenter(newCoords)
-        } catch(e) { console.log(e.message)
+        } catch(e) { 
+            console.log(e.message)
         } finally {
             inputRef.current.value = ''
         }

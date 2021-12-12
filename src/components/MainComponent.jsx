@@ -52,8 +52,8 @@ export default function MainComponent({ ymaps }) {
     }
 
     const onDragEnd = (result) => {
-        if (!result.destination) return
-        if (result.source.index === result.destination.index) return
+        if (!result.destination) return // если потянули за пределы области
+        if (result.source.index === result.destination.index) return // если вернули на место, откуда взяли
 
         const items = reorder(
             placemarks,
