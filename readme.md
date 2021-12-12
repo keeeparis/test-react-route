@@ -79,7 +79,7 @@ Container Components - это компоненты, в которых проис
 ~~~text
 const Main = ({ children }) => {
   const handleClick = () => {
-    alert("Клик")
+    alert("Клик") 
   }
 
   return (
