@@ -1,5 +1,7 @@
 # Редактор маршрутов на React и YandexMaps
 
+[Версия на Typescript](https://github.com/keeeparis/route-react-ts)
+
 ## Где посмотреть?
 
 https://keeeparis.github.io/react-routes-test/
