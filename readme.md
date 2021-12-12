@@ -84,7 +84,7 @@ const Main = ({ children }) => {
 
   return (
     <div onClick={open}>
-	    {children}
+      {children}
     </div>
   )
 }
