@@ -83,7 +83,13 @@ export default function MainComponent({ ymaps }) {
                 </DragDropContext>
             </Content>
             <Footer>
-                <a href='https://t.me/keeeparis' className='telLink' rel='noopener noreferrer'>Vladimir Trotsenko</a>, {new Date().getFullYear()}
+                <a 
+                    href='https://t.me/keeeparis' 
+                    className='telLink' 
+                    rel='noopener noreferrer'
+                >
+                    Vladimir Trotsenko
+                </a>, {new Date().getFullYear()}
             </Footer>
         </Layout>
     )
